@@ -27,3 +27,20 @@ https://github.com/Admindatosgobes/Laboratorio-de-Datos/blob/main/Data%20Science
 
 https://github.com/FranPuentes/iTI2025
 
+https://github.com/koldLight/curso-python-analisis-datos
+
+https://github.com/Akramz/Hands-on-Machine-Learning-with-Scikit-Learn-Keras-and-TensorFlow
+
+
+Llibres:
+
+https://machine-learning-with-python.readthedocs.io/en/latest/#
+
+https://github.com/ageron/handson-ml3
+
+https://github.com/antoniocoloma/MachineLearning
+
+https://cesguiro.es/doku.php/clase/ia/saa/start
+
+https://www.aprendemachinelearning.com/guia-de-aprendizaje/
+

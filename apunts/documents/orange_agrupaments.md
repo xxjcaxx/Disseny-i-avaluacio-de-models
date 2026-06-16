@@ -63,7 +63,7 @@ Ens interessa saber quins factors afecten més a l'hora de clavar un estudiant e
 
 Pel que sembla, aquest grup té una bona mitjana en història, però amb una gran desviació. Si triem el subgrup Phil, George, Maya, tenen un 90 quasi exacte. Els altres subgrups tenen menys nota, però més que els no seleccionats. Per tant, podem dir que aquest és un dels criteris. 
 
-Di seguim mirant, veruem dos grans grups de "lletres" o "ciencies" i un grup menut d' "esports"
+Di seguim mirant, vorem dos grans grups de "lletres" o "ciencies" i un grup menut d' "esports"
 
 Baix del `Box Plot` apareix el factor `t` que indica la diferència entre la seua distribució en el clúster i la de fora del clúster. Un `t` alt indica que aquesta variable és important en aquest clúster. 
 

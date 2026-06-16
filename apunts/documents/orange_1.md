@@ -78,5 +78,9 @@ Descarreguem el addon `Geo`. Connectem el clustering al `Geocoding`, ja que no t
 ![mapa](./imgs_orange/mapa.png)
 
 
+## Clustering
 
+Si apliquem `k-Means` ens recomana 2 clusters i si els dibuixem son realment molt pareguts al que ja hem calculat amb les distàncies i `Hierarchical Clustering`. 
+
+No obstant, l'objectiu és molt distint. Per un costat al calcular distàncies i dibuixar-les no estem entrenant un model per predir l'agrupament de nous països. Sols estem visualitzant clusters. Amb `k-Means` estem entrenant un model de clustering que podria posar en alguns dels 2 grups un nou país. Amés, és molt més eficient amb grans quantitats de dades. 
 

@@ -1,3 +1,5 @@
+# Reducció de dimensionalitat
+
 ## PCA
 
 Anem a utilitzar el `Dataset` de `Zoo` amb característiques booleanes dels animals. 
@@ -26,7 +28,7 @@ Després veiem que hi ha animals "molt" del seu tipus i estan a la seua regió i
 * La tollina és molt peix.
 * El pollastre és molt au. 
 
-El clúster no ha funcionat del tot bé, però li trobem el sentit.
+El agrupament no ha funcionat del tot bé, però li trobem el sentit.
 
 
 
@@ -46,4 +48,47 @@ Amb aquesta sequüència podem veure quines variables afecten més al PCA. Prime
 ![explicacio pca](./imgs_orange/explicaciopca.png)
 
 
+## Multidimensional Scaling
+
+Si connectem les dades a `Distances` i a una `Distance Matrix` també conseguirem una manera de representar en 2D aquest espai multidimensional. 
+
+Amb `MDS` ens mostra una representació válida com la del PCA:
+
+![mds](./imgs_orange/mds.png)
+
+La diferència és que el PCA intenta conservar la variança i el MDS les distàncies entre parells. PCA és una projecció en menys dimensions i MDS optimitza la posició dels elements iterativament. 
+
+Si calculem les distàncies en el espai multidimensional entre dos punts, aquesta distància es pot representar en dos dimensions. El problema és quan hi ha més punts i cal representar la distancia entre tots de forma correcta però en 2D. El que fa es començar en llocs que semblen correctes (PCA), calcular distàncies i minimitzar la suma de les diferències de distància al quadrat (per a que siga positiu). Això ho fa iterativament fins que no troba millores significatives. Si comença en llocs aleatoris pot no trobar solucions tant óptimes com si comença on un PCA li diu. 
+
+El visualitzador d'Orange ens permet desordenar els punts i veure com va millorant en cad iteració. 
+
+## t-Distributed Stochastic Neighbor Embedding
+
+`tSNE` és una altra manera de visualitzar grups per distàncies, però dona més importància les distàncies curtes. 
+
+> Per exemple, 2 km més de distància si vaig caminant a treballar és molt més important que 2 km si vaig a París en avió.
+
+Com el seu no indica es tracta d'un `Embedding`, això vol dir una representació en menys dimensions de la informació. Potencia els punts pròxims, per això es diu `Neighbor` i té un component `Stochastic` perque inicialitza amb punts aleatoris. La `t` és per `t-distribution`, que s'utilitza per calcular la importància de cada veí. Mentre que `MDS` preserva les distàncies, `t-SNE` preserva els veins de cada punt.
+
+![comparativa](./imgs_orange/comparativa.png)
+
+En aquesta imatge es veu la diferencia entre `PCA`, `MDS` i `t-SNE`. PCA fa grups més compactes però amb errades, MDS separa prou bé, però dispersa els grups i t-SNE és el que millor ha funcionat en aquest cas. PCA ha tingut un problema al representar sols poc més del 50% de la variança, segurament per tenir variables poc correlacionades. 
+
+El funcionament inicial és paregut al MDS, però prioritza mantenir les distàncies dels veins. En Orange també es pot veure la simulació i modificar l'exageració, que encara junta més els grups.
+
+
+## Data maps
+
+Imaginem que no tenim la columna del tipus i, per tant, no tenim un `target` al dataset. Igualment es pot fer un `t-SNE` i passar a un `Box Plot` per veure les variables que més afecten a un grup seleccionat de punts. (Ara no tenen color). 
+
+
+![datamap](./imgs_orange/datamap.png)
+
+## Resum de la reducció de dimensionalitat. 
+
+Per a fer gràfics visualment molt clars, `t-SNE` és el més efectiu. `MDS` manté totes les distàncies, així que pot no ser tan clar, però és més real. `PCA` per la seua part, és un reductor de dimensionalitat matematicament robust i útil per a entrenar models, reduir variança o comprimir dades. 
+
+MDS o t-SNE no son bons per al entrenament, ja que no permeten clavar noves dades sense cambiar el mapa. PCA és una fórmula matemàtica consistent que s'aplica a noves dades o dades de test sense problemes. 
+
+Aquests algorismes NO són de clusterització, són per a projectar dades i visualitzar-les o utilitzar aquesta projecció per a posteriors anàlisis. Poden ser bons aliats en l'anàlisi previ per detectar visualment patrons. 
 
