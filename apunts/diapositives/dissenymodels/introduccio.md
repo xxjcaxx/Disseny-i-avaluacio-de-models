@@ -91,7 +91,7 @@ layout: defecte
 
 ## Tractament de dades
 
-* **One hot encoding**: Transformar variables categòriques en variables binàries.
+* **One hot encoding**: Transformar variables categòriques en variables binàries. Paregut són les **Dummy variables** que creen una columna menys per al valor per defecte. 
 * **Normalització**: Escalar les dades per a que tinguin un rang específic, com per exemple [0, 1].
 * **Estandardització**:  Escalar les dades per a que tinguin una mitjana de 0 i una desviació estàndard de 1.
 * **Imputació de dades**: Omplir les dades faltants amb valors estimats, com per exemple la mitjana o la mediana de la columna.
@@ -318,6 +318,21 @@ Tenim que fer alguna cosa amb les dades que falten, però abans cal preguntar-se
 * **Deixar com està**, pot ser que falte o siga NaN. Alguns models ho suporten i pot ser informatiu també. 
 
 
+---
+layout: defecte
+---
+
+## Codificar i escalar
+
+* Les dades categòriques no són bones per als models, que necessiten números. Com solen tenir un número limitat de valors es poden canviar per números. 
+* Es pot aplicar `One Hot Encoding` en variables categòriques si els números poden afectar al algorisme. 
+* Moltes vegades, al calcular distàncies ho fem en distintes escales. Es farà una **normalització** o **Estandararització**, **z-score** per poder comparar distintes dades.  
+
+
+---
+layout: defecte
+---
+
 ## Analitzar correlacions
 
 <img src="./images/graficdispersio.jpeg" alt="Scatter" class="max-w-full max-h-[20vh] w-auto mx-auto object-contain" />
@@ -358,6 +373,10 @@ layout: defecte
 * Amb un **Diagrama de caixa** Es veu la mitjana, la varianza i els quartils. 
 * Es pot fer un diagrama de caixa d'una variable en funció d'una altra variable per veure cóm es correlacionen i la varianza d'aquesta dispersió. 
 
+---
+layout: defecte
+---
+
 ## Distàncies
 
 * Amb el teorema de Pitàgores es pot calcular la distància euclidiana entre dos punt en un espai de 2 dimensions. Aquesta fórmula por escalar a més dimensions.
@@ -367,6 +386,10 @@ layout: defecte
 * A partir de les distàncies es pot calcular agrupament per entendre millor el dataset.
 * Es poden comparar les distàncies amb els **targets** per interpretar d'una altra manera les dades, detectar outliers.  
 
+---
+layout: defecte
+---
+
 ## Agrupaments
 
 * A partir de les distàncies calculem agrupaments en distints algorismes.
@@ -375,3 +398,32 @@ layout: defecte
 * Amb un algorisme anomenat Hierarchical Clustering es poden fer grups i dibuixar en un dendograma on una gràfica de dispersió. 
 * Un altre algorisme és MDS el qual tracta de representar en 2D unes distàncies multidimensionals respectant les distàncies.
 * Un altre és el t-SNE, que tracta de mostrar les distàncies, però prioritzant la proximitat dels veins. 
+
+
+---
+layout: defecte
+---
+
+## Dividir el dataset en training i test
+
+* És comú dividir-ho en 70% de train, 20% de validació i 10% de test
+* Moltes vegades no calen les dades de validació i és un 80/20%
+
+---
+layout: defecte
+---
+
+## Entrenar i testar el model
+
+* Cada algorisme té les seues particularitats que anirem veient.
+* Durant l'entrenament es comparen els resultats amb les dades de **train** i les de validació. 
+* Després de l'entrenament es comparen amb les dades de test per veure si ha generalitzat.
+* Hi ha diverses mesures per a comprovar si l'entrenament ha funcionat, no sols la precisió. 
+
+
+## Posar en producció
+
+* Tota la tasca de l'entrenament sols es fa una vegada i les prediccions del model serna més ràpides.
+* El model són els paràmetres, que solen ser un conjunt de números en un fitxer.
+* El model és interpretat amb el seu algorisme per a noves dades.
+* Entren nove dades, es tornen a codificar, entren al model i es treu una predicció.
