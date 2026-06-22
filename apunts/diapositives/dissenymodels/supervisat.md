@@ -33,11 +33,24 @@ layout: defecte
 
 ## Algorismes
 
+* **Naive Bayes**
 * **KNN (K-Nearest Neighbours)**
 * **Regresió Lineal**
 * **Regresió Logística**
 * **Arbres de decisió**
 * **Màquines de Vector Suport (SVM)**
+
+---
+layout: defecte
+---
+
+## Naive Bayes
+
+* Fàcil d'implementar i molt ràpid.
+* Aplicable a tots els problemes de classificació. Pot ser una base per a un primer anàlisi del problema abans d'algorismes més costosos. 
+* Es diu Naive perquè asumeix que els atributs tenen una distribució normal, per exemple.
+* Funciona en atributs numèrics i categorics (Gaussian  o Categorical) 
+
 
 ---
 layout: defecte
