@@ -60,7 +60,7 @@ La diferència és que el PCA intenta conservar la variança i el MDS les distà
 
 Si calculem les distàncies en el espai multidimensional entre dos punts, aquesta distància es pot representar en dos dimensions. El problema és quan hi ha més punts i cal representar la distancia entre tots de forma correcta però en 2D. El que fa es començar en llocs que semblen correctes (PCA), calcular distàncies i minimitzar la suma de les diferències de distància al quadrat (per a que siga positiu). Això ho fa iterativament fins que no troba millores significatives. Si comença en llocs aleatoris pot no trobar solucions tant óptimes com si comença on un PCA li diu. 
 
-El visualitzador d'Orange ens permet desordenar els punts i veure com va millorant en cad iteració. 
+El visualitzador d'Orange ens permet desordenar els punts i veure com va millorant en cada iteració. 
 
 ## t-Distributed Stochastic Neighbor Embedding
 
@@ -72,7 +72,7 @@ Com el seu no indica es tracta d'un `Embedding`, això vol dir una representaci�
 
 ![comparativa](./imgs_orange/comparativa.png)
 
-En aquesta imatge es veu la diferencia entre `PCA`, `MDS` i `t-SNE`. PCA fa grups més compactes però amb errades, MDS separa prou bé, però dispersa els grups i t-SNE és el que millor ha funcionat en aquest cas. PCA ha tingut un problema al representar sols poc més del 50% de la variança, segurament per tenir variables poc correlacionades. 
+En aquesta imatge es veu la diferencia entre `PCA`, `MDS` i `t-SNE`. PCA fa grups més compactes però amb errades, MDS separa prou bé, però dispersa els grups i t-SNE és el que millor ha funcionat en aquest cas. PCA ha tingut un problema al representar sols poc més del 50% de la variància, segurament per tenir variables poc correlacionades. 
 
 El funcionament inicial és paregut al MDS, però prioritza mantenir les distàncies dels veins. En Orange també es pot veure la simulació i modificar l'exageració, que encara junta més els grups.
 
@@ -86,9 +86,8 @@ Imaginem que no tenim la columna del tipus i, per tant, no tenim un `target` al 
 
 ## Resum de la reducció de dimensionalitat. 
 
-Per a fer gràfics visualment molt clars, `t-SNE` és el més efectiu. `MDS` manté totes les distàncies, així que pot no ser tan clar, però és més real. `PCA` per la seua part, és un reductor de dimensionalitat matematicament robust i útil per a entrenar models, reduir variança o comprimir dades. 
+Per a fer gràfics visualment molt clars, `t-SNE` és el més efectiu. `MDS` manté totes les distàncies, així que pot no ser tan clar, però és més real. `PCA` per la seua part, és un reductor de dimensionalitat matemàticament robust i útil per a entrenar models, reduir variància o comprimir dades. 
 
-MDS o t-SNE no son bons per al entrenament, ja que no permeten clavar noves dades sense cambiar el mapa. PCA és una fórmula matemàtica consistent que s'aplica a noves dades o dades de test sense problemes. 
+MDS o t-SNE no son bons per al entrenament, ja que no permeten clavar noves dades sense cambiar el mapa. PCA és una fórmula matemàtica consistent que s'aplica a noves dades o dades de test sense problemes.
 
-Aquests algorismes NO són de clusterització, són per a projectar dades i visualitzar-les o utilitzar aquesta projecció per a posteriors anàlisis. Poden ser bons aliats en l'anàlisi previ per detectar visualment patrons. 
-
+Aquests algorismes NO són de clusterització, són per a projectar dades i visualitzar-les o utilitzar aquesta projecció per a posteriors anàlisis. Poden ser bons aliats en l'anàlisi previ per detectar visualment patrons.
