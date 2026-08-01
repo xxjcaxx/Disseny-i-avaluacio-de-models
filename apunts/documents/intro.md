@@ -11,9 +11,9 @@ El cicle de vida de les dades es pot resumir com:
 * **Visualització de dades:** Creació de representacions visuals de les dades per a comunicar les conclusions de manera efectiva.
 * **Presa de decisions:** Ús dels coneixements obtinguts a partir de l'anàlisi per a informar les decisions i estratègies empresarials.
 
-Encara que farem un poc de tot, aquest mòdul es centra en l'exploració i el modelatge. Suposarem que les hem aconseguit i netejat en la majoria dels casos i que algún aprofitarà els models per a prendre decisions.
+Encara que farem un poc de tot, aquest mòdul es centra en el modelatge. Suposarem que les hem aconseguit i netejat en la majoria dels casos i que algún aprofitarà els models per a prendre decisions.
 
-Tant l'exploració com el modelatge utilitzen unes matemàtiques molt més avançades del que anem a veure en aquest curs. Utilitzarem llibreries i programes que aporten una capa d'abstracció que simplifica la tasca. No obstant, el significat d'alguns conceptes és important per saber el significat dels resultats. 
+Tant l'exploració com el modelatge utilitzen unes matemàtiques molt més avançades del que anem a veure en aquest curs. Utilitzarem llibreries i programes que aporten una capa d'abstracció que simplifica la tasca. No obstant, el significat d'alguns conceptes és important per saber el significat dels resultats.
 
 ## Breu resum del que és l'aprenentatge automàtic
 
@@ -34,11 +34,11 @@ Aquestes funcions s'assoleixen mitjançant diverses tècniques d'aprenentatge au
 
 ## Resolució de problemes
 
-En el mon real ens trobem constantment amb problemes que han de ser resolts. Molts d'ells es poden solucionar amb un `model matemàtic`. En eixe cas, el model és una representació del problema en termes matemàtics per poder ser resolt amb tècniques matemàtiques. D'això tracten les `matemàtiques aplicades`. Després de resoldre i interpretar el resultat, es torna al mon real. 
+En el mon real ens trobem constantment amb problemes que han de ser resolts. Molts d'ells es poden solucionar amb un `model matemàtic`. En eixe cas, el model és una representació del problema en termes matemàtics per poder ser resolt amb tècniques matemàtiques. D'això tracten les `matemàtiques aplicades`. Després de resoldre i interpretar el resultat, es torna al mon real.
 
-La informàtica ha resolt problemes del mon real des de l'inici. Un cas clàsic és el `problema de viatjant`. Aquest problema consisteix a trobar la ruta més curta per visitar un conjunt de ciutats i tornar al punt d'origen. Es pot resoldre fàcilment am poques ciutats, però a mesura que el nombre de ciutats augmenta, el nombre de rutes possibles creix exponencialment, fent que la resolució sigui molt difícil. Aquest és un exemple de problema NP-complet, on no es coneix cap algorisme eficient per resoldre'l en tots els casos. De forma clàssica es resolt amb heurístiques fent grafos. Els grafos són un model de la realitat on les vores tenen la distància entre ciutats. En aquest cas, les vores no són dirigides, totes les ciutats tenen al menys una connexió i té cicles. Al ser un problema clàssic no és difícil trobar un exemple o llibreria que el soluciona.
+La informàtica ha resolt problemes del mon real des de l'inici. Un cas clàssic és el `problema de viatjant`. Aquest problema consisteix a trobar la ruta més curta per visitar un conjunt de ciutats i tornar al punt d'origen. Es pot resoldre fàcilment am poques ciutats, però a mesura que el nombre de ciutats augmenta, el nombre de rutes possibles creix exponencialment, fent que la resolució sigui molt difícil. Aquest és un exemple de problema NP-complet, on no es coneix cap algorisme eficient per resoldre'l en tots els casos. De forma clàssica es resolt amb heurístiques fent grafos. Els grafos són un model de la realitat on les vores tenen la distància entre ciutats. En aquest cas, les vores no són dirigides, totes les ciutats tenen al menys una connexió i té cicles. Al ser un problema clàssic no és difícil trobar un exemple o llibreria que el soluciona.
 
 Un altre problema clàssic és l'escacs. No és possible recorrer tot l'arbre de decisions per trobar la millor jugada. Per tant, necessitem un enfoc `minimax` en el que minimitzes l'avantatge de l'oponent i maximitzes el teu. Aquest necessita una funció de cost que puga mesurar qui i per quant està guanyant. Aquesta funció ja és un problema que es pot solucionar amb machine learning o heurísticament i després s'utilitza per recorrer la major quantitat d'estats possible. Per evitar explorar branques que no afecten a la decisió final s'utilitzen tècniques como la poda `alfa-beta` o `montecarlo tree search`. 
 
-Si parlem de IA, el model és el resultat d'un procés d'aprenentatge a partir de dades. El procés es fà amb un algorisme d'aprenentatge automàtic. Les màquines aprenen identificant patrons que no són trivials o evidents. 
+Si parlem de IA, el model és el resultat d'un procés d'aprenentatge a partir de dades. El procés es fà amb un algorisme d'aprenentatge automàtic. Les màquines aprenen identificant patrons que no són trivials o evidents.
 

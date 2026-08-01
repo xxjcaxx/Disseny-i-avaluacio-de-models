@@ -41,7 +41,7 @@ Algunes són positives i algunes negatives, és a dir, a més d'una variable mé
 
 Fixem-nos en la correlació entre `Inequality in Education` i `Mean years of schooling`. El que fem és correctar les `features` de les correlacions amb les features de la gràfica per filtrar i veiem eixa correlació negativa:
 
-![correlacio negativa](./imgs_orange/correlacio%20negativa.png)
+![correlacio negativa](./imgs_orange/correlacio_negativa.png)
 
 
 ### Distribucions
