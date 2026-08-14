@@ -16,7 +16,7 @@ Si connectem a `Linear Regression`, de ahí a `Predictions` i les prediccions se
 El indicador `R2` és 0.639. 
 
 
-## Regressió lineal polinòmica
+## Regressió lineal amb 2 variables
 
 Carreguem el dataset i veurem una gran quantitat de columnes. Algunes poden no ser explicatives o faltar dades, així que ens quedarem amb les dos columnes més significatives per poder representar gràfiques en 2D. Si fem un Scatterplot i polsem en `Find Informative Projections` ens recomana les dimensions: `Neighborhood, Overall Qual` com a les més representatives del preu final. 
 
@@ -24,7 +24,7 @@ La qualitat total és numèric però discret. El Neighborhood és categòric. En
 
 ![continuize iowa](./imgs_orange/continuize_iowa.png)
 
-Si ho connecte al predictions ens dona un `R2` de 0.72. Millor que l'anterior, però si ho connectem amb el 'Scatter Plot' i anem seleccionant aquells a més error, les cases més cares tenen més error independentment del barri. 
+Si ho connecte al predictions ens dona un `R2` de 0.72. Millor que l'anterior, però si ho connectem amb el 'Scatter Plot' i anem seleccionant aquells amb més error, les cases més cares tenen més error independentment del barri. 
 
 ## Tree
 
@@ -42,10 +42,23 @@ En les cases amb errors més extrems sí que pareix que el tree té un error men
 
 En `Random Forest` tampoc millora molt.
 
+Si seleccionem les dos variables numériques més correlacionades i fem el tree el resultat és 0.92. Això vol dir que, per a un tree és més informatiu dos variables numériques que informen de la qualitat i la superficie que el barri. 
+
 ## kNN
 
 Aquest algorisme fa prediccions per distàncies. El resultat no és millor que el tree amb aquestes dos variables. 
 
 Encara que l'algorisme de kNN és molt més eficient, intentarem comparar el seu resultat amb la visualització `MDS`. Com que tenim moltes dimensions al fer el `One hot` tardarà prou en calcular, ho podem parar en un 50% o menys, que el resultat no canviarà molt. 
 
+Si triem dos variables numèriques i les normalitzem el resultat és prou bó. 
 
+## Regressio polinómica
+
+Si instal·lem el addon de eduació podem probar la polinómica. El r2 és un poc millor en grau 4 o 5. 
+Com que la relació entre la qualitat i el preu no és estrictament recta, s'ajusta millor i dona menys errors, amb graus majors fa Overfitting i funciona pitjor. 
+
+Si volem polinómica amb moltes variables podem crear les columnes elevant al quadrat, cub... i fer una regressió lineal. El resultat tindrà un r2 millor perquè té en compte més variables i l'ajust no totalment lineal. 
+
+## PCA
+
+Ara la idea és seleccionar algunes variables correlacionades i crear una única variable o dos a partir del PCA que siga més explicativa. Si triem les 4 o 5 variables més correlacionades amb el preu i les juntem en un PCA de 2 components, amb una regressió lineal no dona un R2 millor que amb les variables directament, no obstant, hem reduit les dimensions i pot accelerar l'entrenament si tinguerem moltes dades. 
