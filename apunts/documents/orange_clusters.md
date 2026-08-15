@@ -1,4 +1,4 @@
-# Clusters
+# Clusters en Orange
 
 Quan tenim les dades representades en 2D i veiem grups clars, podem intuïtivament detectar els agrupaments. Amés, podem intuir si un punt està més cap al centre del grup que altres. Per medir aquesta pertinença a un grup en termes matemàtics es pot fer mesurant la distància a cada membre del grup i calculant la mitjana. Si la mitjana és menuda comparada en altres es considera que el punt és central al seu cluster.
 

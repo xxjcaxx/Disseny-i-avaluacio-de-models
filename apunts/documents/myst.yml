@@ -32,10 +32,11 @@ project:
         - file: orange_clusters.md
         - file: clustering.ipynb
         - file: orange_pca.md
-        - file: DemoClusteringJerarquico.ipynb
+
     - title: Exemples
       children:
         - file: orange_guess_who.md
+        - file: DemoClusteringJerarquico.ipynb
     - title: Exercicis
       children:
         - file: exercici_child_internet_use.md

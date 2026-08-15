@@ -1,3 +1,7 @@
+# Introducció a Orange
+
+Utilitzarem Orange Data Mining per veure exemples ràpids dels algorismes i tècniques abans de començar amb les llibreries de Python. 
+
 ## Explorar les dades
 
 Anem a explorar les dades d'un Dataset del que Orange ens proporciona al seu servidor: HDI, (Human Development Index) Que indica el HDI de cada país i serveix per valorar els motius d'aquest desenvolupament. 

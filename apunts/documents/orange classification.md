@@ -1,3 +1,5 @@
+# Classificació en Orange
+
 Si agafem el famós fitxer de `Iris` podem fer un model de classificació amb distints algorismes i comparar. 
 
 Per fer l'entrenament podem utilitzar tot el dataset o fer una partició i utilitzar la resta de dades per a test. Com són 150 mostres tenim poca representació per a l'entrenament i pot ser un problema separar dades de test. Veurem maneres de mitigar eixe problema. 

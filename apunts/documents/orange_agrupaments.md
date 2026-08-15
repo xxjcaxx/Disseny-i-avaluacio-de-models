@@ -1,4 +1,4 @@
-## Distàncies
+# Distàncies En Orange
 
 El `Clustering` és detectar automàticament agrupacions en les dades. 
 
@@ -8,7 +8,7 @@ Primer descarreguem el `Dataset` `Course Grades`. Que conté les notes de 16 alu
 
 Com a professors ens interessa saber si hi ha alumnes amb talents en diferents àrees. 
 
-### Distàncies en 2D
+## Distàncies en 2D
 
 Com hi ha més de 2 assignatures tenim que llevar columnes amb `Select Columns` i deixar soles Anglès i Àlgebra. . Això ho passem a un `Scatter Plot` i vorem com *Olga*  i *Maya* estan en els extrems oposats de la gràfica amb molt bona nota en una i molt mala en una altra. 
 
@@ -25,7 +25,7 @@ Per no calcular-les totes a mà, Orange ens proporciona `Distances` i `Distance 
 Amb una distància euclidiana normalitzada o no (en aquest cas no és necessari perquè són les mateixes unitats) vorem que Olga i Maya estan molt distants. Podem comparar elles o altres en el `Scatter Plot` anterior. 
 
 
-### Cluster per distancies
+## Cluster per distancies
 
 La idea dels clusters és trobar grups d'estudiants amb distàncies menudes entre ells. Hi ha varis algorismes per a això. 
 
@@ -45,7 +45,7 @@ La ferramenta d'Orange per a fer això és el *Dendograma*, anomenat `Hierarchic
 
 El resultat és distint si calculem distàncies normalitzades o no. També és distint si calculem el `linkage` com a `Average`, `Ward` o altres. Per a grups sòlids `Ward` o `Average` són bons, per a formes llargues `Single` les detecta millor. `Complete` és un punt mig. 
 
-### Clusters en més dimensions
+## Clusters en més dimensions
 
 Les distàncies ja no són triangles rectangles 2D, ara tenen moltes dimensions, però el càlcul és el mateix.  
 
@@ -55,7 +55,7 @@ Si connectem `Distances` directament al `Dataset` calcularà les distàncies ent
 
 De fet si polsem `Find Informative Projections` vorem que les que més informen del clustering són història i física i que els grups no pareixen tant dispersos.
 
-### Explicar els clusters
+## Explicar els clusters
 
 Ens interessa saber quins factors afecten més a l'hora de clavar un estudiant en un clúster o un altre. Connectem per `Data` el cluster amb `Box Plot` i el subgrup selected. Així veurem en cada grup els valors de cada assignatura. 
 
