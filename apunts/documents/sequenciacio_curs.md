@@ -18,7 +18,7 @@ Suposant que al mòdul de IA ja s'ha explicat de forma teòrica els tipus de IA 
 
 {doc}`Introducció a Orange <orange_1.md>`
 
-A la secció d'Algorismes supervisats anirem veient un per un començant per la regressió i continuant amb la classificació. 
+A la secció d'Algorismes supervisats anirem veient un per un començant per la regressió i continuant amb la classificació.
 
 {doc}`Regressió <regressió.ipynb>`
 

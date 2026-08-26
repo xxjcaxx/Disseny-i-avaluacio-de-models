@@ -32,6 +32,9 @@ project:
         - file: orange_clusters.md
         - file: clustering.ipynb
         - file: orange_pca.md
+    - title: Algorismes de reforç
+      children:
+        - file: reforç/aprenentatge_reforç.md
 
     - title: Exemples
       children:
