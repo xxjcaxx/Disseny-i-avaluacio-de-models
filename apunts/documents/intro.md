@@ -10,6 +10,7 @@ El cicle de vida de les dades es pot resumir com:
 * **Modelatge de dades:** Aplicació de models estadístics o d'aprenentatge automàtic a les dades per a descobrir patrons i fer prediccions. Per a l'analítica descriptiva i diagnòstica, això pot implicar resumir dades i identificar correlacions. Per a l'analítica predictiva, implica la construcció de models per a pronosticar resultats futurs. Per a l'analítica prescriptiva, inclou tècniques d'optimització per a recomanar accions.
 * **Visualització de dades:** Creació de representacions visuals de les dades per a comunicar les conclusions de manera efectiva.
 * **Presa de decisions:** Ús dels coneixements obtinguts a partir de l'anàlisi per a informar les decisions i estratègies empresarials.
+* **Posada en producció**: Moltes vegades un model formarà part d'un sistema més gran. Cal posar el model en producció per a que s'execute cada vegada que se li demana una predicció. Possiblement es vol fer una API per al model, importar-lo en un programa...
 
 Encara que farem un poc de tot, aquest mòdul es centra en el modelatge. Suposarem que les hem aconseguit i netejat en la majoria dels casos i que algún aprofitarà els models per a prendre decisions.
 

@@ -44,3 +44,7 @@ https://cesguiro.es/doku.php/clase/ia/saa/start
 
 https://www.aprendemachinelearning.com/guia-de-aprendizaje/
 
+https://cayetanoguerra.github.io/ia/
+
+https://github.com/avidaldo/ia25
+
