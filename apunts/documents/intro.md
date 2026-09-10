@@ -12,6 +12,9 @@ El cicle de vida de les dades es pot resumir com:
 * **Presa de decisions:** Ús dels coneixements obtinguts a partir de l'anàlisi per a informar les decisions i estratègies empresarials.
 * **Posada en producció**: Moltes vegades un model formarà part d'un sistema més gran. Cal posar el model en producció per a que s'execute cada vegada que se li demana una predicció. Possiblement es vol fer una API per al model, importar-lo en un programa...
 
+
+![intro](./intro/tdsp-lifecycle2.png)
+
 Encara que farem un poc de tot, aquest mòdul es centra en el modelatge. Suposarem que les hem aconseguit i netejat en la majoria dels casos i que algún aprofitarà els models per a prendre decisions.
 
 Tant l'exploració com el modelatge utilitzen unes matemàtiques molt més avançades del que anem a veure en aquest curs. Utilitzarem llibreries i programes que aporten una capa d'abstracció que simplifica la tasca. No obstant, el significat d'alguns conceptes és important per saber el significat dels resultats.

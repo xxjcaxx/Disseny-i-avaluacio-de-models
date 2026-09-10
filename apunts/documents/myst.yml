@@ -15,6 +15,7 @@ project:
     - title: Introducció
       children:
         - file: intro/Machine learning python.ipynb
+        - file: intro/numpypandas.ipynb
         - file: ciencia_dades.md
         - file: orange_1.md
     - title: Algorismes Supervisats
