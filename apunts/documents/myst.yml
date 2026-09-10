@@ -34,7 +34,7 @@ project:
         - file: orange_pca.md
     - title: Algorismes de reforç
       children:
-        - file: reforç/aprenentatge_reforç.md
+        - file: reforç/aprenentatge_refoç.ipynb
 
     - title: Exemples
       children:
