@@ -30,12 +30,22 @@ No obstant, després de veure els algorismes més importants, cal optimitzar la 
 
 ## UD3 Algorismes no Supervisats
 
-Bàsicament els no supervisats tracten el `clustering`. Veurem els algorismes principals i algunes tècniques per a la reducció de dimensionalitat que poden ser útils també per als supervisats
+Bàsicament els no supervisats tracten el `clustering`, detecció d'anomalies i reducció de dimensionalitat. Veurem els algorismes principals i algunes tècniques per a la reducció de dimensionalitat que poden ser útils també per als supervisats
 
 {doc}`Aprenentatge no supervisat <clustering.ipynb>`
 
-Al finalitzar aquesta UD es faran exercicis complets on s'utilitzaran indistintament qualsevol algorisme treballat anteriorment per aconseguir el millor resultat possible. 
+Al finalitzar aquesta UD es faran exercicis complets on s'utilitzaran indistintament qualsevol algorisme treballat anteriorment per aconseguir el millor resultat possible.
 
-## UD4 Aprenentatge per reforç
+## UD4 Xarxes neuronals
 
-## UD5 Xarxes neuronals
+Aquesta unitat suposarà un canvi tècnic important. Començarem a fer ús de les targetes gràfiques i de llibreries noves com `Pytorch`. Apareixeran nous conceptes com els tensors o la `backpropagation`.
+
+Farem una introducció amb xarxes mínimes que resolen problemes pareguts als del machine learning com perceptrons o xarxes denses i anirem evolucionant a arquitectures més complexes com els CNN o seqüències.
+
+Amés, la manera d'enfocar un problema es torna més complexa amb èpoques, learning rates, monitorització de l'entrenament amb `TensorBoard`...
+
+Veurem els principis bàsics del `NLP` a partir dels seus fonaments.
+
+## UD5 Aprenentatge per reforç
+
+Aquesta unitat està al final perquè l'aprenentatge per reforç pot ser aplicat a machine learning tradicional com a xarxes neuronals. També suposa la creació de simuladors i el desplegament mínim de models.
