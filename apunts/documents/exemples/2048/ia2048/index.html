@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="top">
+        <div class="left-top">
+          <button id="newGame">New Game</button>
+          <button id="ai">AI MCTS</button>
+          <button id="ai-server">AI Server</button>
+          <input type="text" name="server" id="server" placeholder="http://localhost:5000" />
+          <button id="random">Random</button>
+        </div>
+        <div id="puntuacions"></div>
+      </div>
+      <div id="board"></div>
+      <div id="stats"><pre>numSearches,avgCounts,maxCounts,maxDepth,avgMaxs,max,maxBoard,wins0,wins1,wins2,wins3,bestMove,board00,board01,board02,board03,board10,board11,board12,board13,board20,board21,board22,board23,board30,board31,board32,board33
+      </pre></div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
