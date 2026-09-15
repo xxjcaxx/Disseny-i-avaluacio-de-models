@@ -49,3 +49,5 @@ Veurem els principis bàsics del `NLP` a partir dels seus fonaments.
 ## UD5 Aprenentatge per reforç
 
 Aquesta unitat està al final perquè l'aprenentatge per reforç pot ser aplicat a machine learning tradicional com a xarxes neuronals. També suposa la creació de simuladors i el desplegament mínim de models.
+
+## UD6 Series temporals

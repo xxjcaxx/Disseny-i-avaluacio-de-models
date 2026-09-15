@@ -33,6 +33,9 @@ project:
         - file: orange_clusters.md
         - file: clustering.ipynb
         - file: orange_pca.md
+    - title: Deep Learning
+      children:
+        - file: deep_learning/deep_learning.ipynb
     - title: Algorismes de reforç
       children:
         - file: reforç/aprenentatge_refoç.ipynb
