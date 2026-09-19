@@ -36,6 +36,7 @@ project:
     - title: Deep Learning
       children:
         - file: deep_learning/deep_learning.ipynb
+        - file: deep_learning/pytorch.ipynb 
     - title: Algorismes de reforç
       children:
         - file: reforç/aprenentatge_refoç.ipynb
