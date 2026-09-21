@@ -31,6 +31,8 @@ https://github.com/koldLight/curso-python-analisis-datos
 
 https://github.com/Akramz/Hands-on-Machine-Learning-with-Scikit-Learn-Keras-and-TensorFlow
 
+https://github.com/kmario23/deep-learning-drizzle
+
 
 Llibres:
 
