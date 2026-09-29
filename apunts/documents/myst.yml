@@ -36,7 +36,9 @@ project:
     - title: Deep Learning
       children:
         - file: deep_learning/deep_learning.ipynb
+        - file: deep_learning/xarxes_numpy.ipynb
         - file: deep_learning/pytorch.ipynb 
+        - file: deep_learning/xarxes_neuronals_pytorch.ipynb
     - title: Algorismes de reforç
       children:
         - file: reforç/aprenentatge_refoç.ipynb
