@@ -49,11 +49,49 @@ function runGameRandom(board) {
     }
 }
 
+ async function runGameServer(board, serverUrl) {
+      //const movesMap = {0: 'right', 1: 'left', 2: 'up', 3: 'down'};
+      let validMoves = getValidMoves(board);
+      let moveIndex = validMoves.map((v,i) => v === 1 ? i : -1).filter(i => i !== -1);
+      if(moveIndex.length > 0){
+        try {
+          const response = await fetch(`${serverUrl}/best_move`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ board: board.flat() })
+          });
+          const data = await response.json();
+          const bestMove = data.best_move;
+          //console.log("bestMove", bestMove);
+          
+          if (bestMove !== undefined) {
+            //console.log(bestMove);
+            
+            const previousBoard = structuredClone(board);
+            board = ç.moveBoard(board)(bestMove);
+                     
+            board = ç.insertRandomNumber(board)(2);
+            logBoard(board);
+            setTimeout(()=>runGameServer(board, serverUrl), 0); 
+          } else {
+            console.error('No best move returned from server');
+          }
+        } catch (error) {
+          console.error('Error fetching best move from server:', error);
+        }
+      }
+      else {
+        console.log("Game Over");
+        const score = board.flat().reduce((acc, val) => acc + val, 0);
+        console.log("Score:", score);
+        
+      }
+    }
 
 let board = ç.generate2048Board(4);
 board = ç.randomPlace(board)(2);
 
 logBoard(board);
 
-runGameRandom(board);
+runGameServer(board, 'http://localhost:5000');
 
