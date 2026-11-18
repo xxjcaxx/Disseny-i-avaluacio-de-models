@@ -195,7 +195,7 @@ document.addEventListener("DOMContentLoaded",()=>{
           });
           const data = await response.json();
           const bestMove = data.best_move;
-          //console.log("bestMove", bestMove);
+          console.log("bestMove", bestMove);
           
           if (bestMove !== undefined) {
             //console.log(bestMove);
