@@ -36,6 +36,7 @@ En algún moment s'unirien grups per proximitat, però és més complicat calcul
 - Calcular totes les distàncies individuals i calcular la mitjana (Average linkage)
 - Calcular la distància dels dos elements més propers (Single Linkage)
 - Calcular els més llunyans (Complete Linkage)
+- Calcular la mínima suma de Quadrats (Ward)
 
 ![distancies a ma](./imgs_orange/distancies_a_ma.png)
 
